@@ -1,0 +1,47 @@
+[user]
+	name = Jamey Nakama
+	email = jnakama@oreilly.com
+
+[color]
+  ui = true
+
+[alias]
+  st = status
+  co = checkout
+  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  log = log --name-status
+  dc = diff --cached
+  cp = cherry-pick
+  sp = commit -am 'SAVE POINT'
+  t = !BRANCH=$(git symbolic-ref --short HEAD) && git push -u origin $BRANCH
+  pp = push -f
+  rbi = rebase -i main
+  c = commit
+
+[pretty]
+  niceoneline = format:%C(yellow)%h%C(auto)%d %Creset%s %C(cyan)[%an] %C(blue)%ar
+
+[hub]
+  protocol = https
+
+[credential]
+
+[core]
+	editor = vim
+
+[push]
+  default = simple
+
+[diff]
+  tool = vimdiff
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+
+[mergetool]
+  keepBackup = true
+
+[init]
+	defaultBranch = main
